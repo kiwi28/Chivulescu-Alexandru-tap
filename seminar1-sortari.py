@@ -198,6 +198,7 @@ print("SELECTION SORT -------------- end\n")
 
 # -------------->COUNTING SORT<----------------------
 
+print("COUNTING SORT -------------- start")
 
 def countingSort(array):
     size = len(array)
@@ -228,6 +229,8 @@ def countingSort(array):
 
 
 data = [4, 2, 2, 8, 3, 3, 1]
+print("unsorted array: \n", data)
 countingSort(data)
-print("Sorted Array in Ascending Order: ")
+print("\nSorted Array in Ascending Order: ")
 print(data)
+print("COUNTING SORT -------------- end")
