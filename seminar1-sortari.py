@@ -1,5 +1,5 @@
 # -------------->MERGE SORT<----------------------
-
+print("MERGE SORT -------------- start")
 def merge(arr, l, m, r):
 	n1 = m - l + 1
 	n2 = r - m
@@ -71,10 +71,12 @@ mergeSort(arr, 0, n-1)
 print("\n\nSorted array is")
 for i in range(n):
 	print("%d" % arr[i],end=" ")
+print("\nMERGE SORT -------------- end\n\n")
  
 
 # -------------->QUICK SORT<----------------------
 
+print("QUICK SORT -------------- start")
 # function to find the partition position
 def partition(array, low, high):
 
@@ -125,8 +127,9 @@ size = len(data)
 
 quickSort(data, 0, size - 1)
 
-print('Sorted Array in Ascending Order:')
+print('\nSorted Array in Ascending Order:')
 print(data)
+print("QUICK SORT -------------- end\n\n")
 
 
 
@@ -134,6 +137,7 @@ print(data)
 
 # Insertion sort in Python
 
+print("INSERTION SORT -------------- end")
 
 def insertionSort(array):
 
@@ -152,6 +156,41 @@ def insertionSort(array):
 
 
 data = [9, 5, 1, 4, 3]
-insertionSort(data)
-print('Sorted Array in Ascending Order:')
+print("Unsorted Array:")
 print(data)
+insertionSort(data)
+print('\nSorted Array in Ascending Order:')
+print(data)
+print("INSERTION SORT -------------- end\n")
+
+
+
+
+
+# -------------->SELECTION SORT<----------------------
+
+print("SELECTION SORT -------------- start")
+
+def selectionSort(array, size):
+   
+    for step in range(size):
+        min_idx = step
+
+        for i in range(step + 1, size):
+         
+            # to sort in descending order, change > to < in this line
+            # select the minimum element in each loop
+            if array[i] < array[min_idx]:
+                min_idx = i
+         
+        # put min at the correct position
+        (array[step], array[min_idx]) = (array[min_idx], array[step])
+
+
+data = [-2, 45, 0, 11, -9]
+size = len(data)
+print("Unsorted array:\n", data)
+selectionSort(data, size)
+print('\nSorted Array in Ascending Order:')
+print(data)
+print("SELECTION SORT -------------- end\n")
